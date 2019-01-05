@@ -16,8 +16,12 @@ You're ready to break stuff!
 ### Preparing a Video
 
 You'll need to create an AVI video using an MPEG-4 codec. You can do
-that with a transcoding tool like [ffmpeg](https://www.ffmpeg.org/),
-or with some video editing software.
+that with a transcoding tool like [ffmpeg](https://www.ffmpeg.org/):
+
+```bash
+ffmpeg -i /path/to/original.avi -c:v mpeg4 /path/to/original-mpeg4.avi
+```
+... or with some video editing software.
 
 ### Breaking Stuff
 
@@ -25,11 +29,11 @@ Once you've got the video, open up a terminal, make sure you're in the
 same directory as the `autodatamosh.pl` script, and run this:
 
 ```bash
-./autodatamosh.pl -i /path/to/original.avi -o /path/to/datamoshed.avi
+./autodatamosh.pl -i /path/to/original-mpeg4.avi -o /path/to/datamoshed.avi
 ```
 
-Replace `/path/to/original.avi` with the path of the video you prepared
-earlier, and `/path/to/datamoshed.avi` with the path where you want to
+Using `/path/to/original-mpeg4.avi` as path of the video you prepared
+earlier, and replacing `/path/to/datamoshed.avi` with the path where you want to
 save the datamoshed video.
 
 That's it! Try to open the new video in a video player. I recommend
